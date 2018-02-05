@@ -36,7 +36,7 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Light | Emitter")
 	FLightInfo EmittedLight;
 
-	UPROPERTY(EditAnywhere, Category = "Light | Distance")
+	UPROPERTY(EditAnywhere, Category = "Light | Emitter")
 	float LightDistance;
 
 };

@@ -33,5 +33,5 @@ void ALightEmitter::Pulse()
 		Block->ClearVisuals();
 	}
 
-	EmitLight(GetActorForwardVector(), EmittedLight, LightDistance);
+	EmitLight(GetActorForwardVector(), EmittedLight);
 }

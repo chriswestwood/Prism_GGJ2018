@@ -47,7 +47,7 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	virtual void DistortLight(FLightInfo InLight, FVector InNormal, FVector InDirection);
-	virtual void EmitLight(FVector Direction, FLightInfo OutLight, float Distance);
+	virtual void EmitLight(FVector Direction, FLightInfo OutLight);
 
 	void VisualiseLight(FVector LightStart, FVector LightEnd, FLightInfo LightInfo);
 	bool IsValidBounce(AActor* LightSource, AActor* TraceHit);

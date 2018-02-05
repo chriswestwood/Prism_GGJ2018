@@ -25,16 +25,16 @@ void ADefractor::DistortLight(FLightInfo InLight, FVector InNormal, FVector InDi
 
 	if (NewR.Colour.R > 0)
 	{
-		EmitLight(RedDirection, NewR, 500.f);
+		EmitLight(RedDirection, NewR);
 	}
 	
 	if (NewG.Colour.G > 0)
 	{
-		EmitLight(GreenDirection, NewG, 500.f);
+		EmitLight(GreenDirection, NewG);
 	}
 	
 	if (NewB.Colour.B > 0)
 	{
-		EmitLight(BlueDirection, NewB, 500.f);
+		EmitLight(BlueDirection, NewB);
 	}
 }

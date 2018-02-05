@@ -8,8 +8,8 @@ void ADiffuser::DistortLight(FLightInfo InLight, FVector InNormal, FVector InDir
 	FVector SecondDirection = (GetActorRotation() + FRotator(0, 0, 0)).Vector();
 	FVector ThirdDirection = (GetActorRotation() + FRotator(0, -45, 0)).Vector();
 
-	EmitLight(FirstDirection, InLight, 500);
-	EmitLight(SecondDirection, InLight, 500);
-	EmitLight(ThirdDirection, InLight, 500);
+	EmitLight(FirstDirection, InLight);
+	EmitLight(SecondDirection, InLight);
+	EmitLight(ThirdDirection, InLight);
 
 }

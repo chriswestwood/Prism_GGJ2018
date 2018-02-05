@@ -30,7 +30,7 @@ void ACombiner::DistortLight(FLightInfo InLight, FVector InNormal, FVector InDir
 		NewColour.Colour.G = FMath::Clamp(UsableG, 0.f, 255.f);
 		NewColour.Colour.B = FMath::Clamp(UsableB, 0.f, 255.f);
 
-		EmitLight(GetActorForwardVector(), NewColour, 500.f);
+		EmitLight(GetActorForwardVector(), NewColour);
 	}
 	
 }

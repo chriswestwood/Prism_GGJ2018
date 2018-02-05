@@ -6,5 +6,5 @@
 void AReflector::DistortLight(FLightInfo InLight, FVector InNormal, FVector InDirection)
 {
 	FVector ReflectionVector = UKismetMathLibrary::GetReflectionVector(InDirection, InNormal);
-	EmitLight(ReflectionVector, InLight, 500);
+	EmitLight(ReflectionVector, InLight);
 }

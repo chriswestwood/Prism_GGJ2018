@@ -47,7 +47,7 @@ void ABlock::DistortLight(FLightInfo InLight, FVector HitNormal, FVector InDirec
 	UE_LOG(LogTemp, Log, TEXT("Distorting light in empty Block object"));
 }
 
-void ABlock::EmitLight(FVector Direction, FLightInfo OutLight, float Distance)
+void ABlock::EmitLight(FVector Direction, FLightInfo OutLight)
 {
 	OutLight.LightStrength-=1;
 	if (OutLight.LightStrength > 0)
@@ -58,7 +58,7 @@ void ABlock::EmitLight(FVector Direction, FLightInfo OutLight, float Distance)
 		FHitResult HitRes;
 
 		FVector TraceStart = GetActorLocation();
-		FVector TraceEnd = GetActorLocation() + (Direction * Distance);
+		FVector TraceEnd = GetActorLocation() + (Direction * (OutLight.LightStrength * 100));
 		FVector HitLocation;
 
 		GetWorld()->LineTraceSingleByChannel(HitRes, TraceStart, TraceEnd, ECC_Visibility, TraceParams);
